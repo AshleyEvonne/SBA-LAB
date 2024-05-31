@@ -1,12 +1,9 @@
 const main = document.querySelector("main");
 const body = document.querySelector("body");
-const h1 = document.querySelector("h1")
-// const nav = document.querySelector("nav");
+
+
 body.style.backgroundColor = ('beige');
-// console.log(main)
-// document.getElementsByTagName("p").innertext = "RECORD & PLAY"
-//  h1.innerText = "RECORD"
-//  main.appendChild(h1)
+
 let vid = document.getElementById("myVideo")
 vid.style.width = "100%"
 vid.style.marginBottom = "40px"
@@ -61,20 +58,12 @@ let imgArr = [
 ]
 imgArr.forEach(element => {
    const pics = document.createElement("img"); //creating an img element
-//    const btn = document.createElement("button");
+
    pics.src = element.URL // selecting photo, allowing the photo to show
    main.appendChild(pics) // attaching "pics" to the "main" element
-//    pics.appendChild(btn)
     pics.style.height = "20vh"
     pics.style.border = "outset, 10px, darkgoldenrod "
     pics.style.margin = "40px"
-    // pics.addEventListener("mouseenter",(event) => {
-    //     let timeFade = pics.style.opacity = "0.8" 
-    //     timeFade.setTimeout((1000) => {
-            
-    //     }, timeout);
-
-    // })
 });
 
 const firstName = document.getElementById("fname")
@@ -108,7 +97,7 @@ document.querySelector("#title").innerHTML = "<h1>Subcribe To News Letter</h1>"
 
 const audio = document.querySelector("audio");
 
-// Example: Add custom play/pause buttons
+// Add custom play/pause buttons
 const playButton = document.getElementById("play-button");
 const pauseButton = document.getElementById("pause-button");
 
