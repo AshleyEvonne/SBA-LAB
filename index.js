@@ -1,28 +1,56 @@
 const main = document.querySelector("main");
 const body = document.querySelector("body");
+const h1 = document.querySelector("h1")
+// const nav = document.querySelector("nav");
 body.style.backgroundColor = ('black');
 // console.log(main)
+//  h1.innerText = "RECORD"
+//  main.appendChild(h1)
 let vid = document.getElementById("myVideo")
 vid.style.width = "100%"
 vid.style.marginBottom = "40px"
 vid.style.paddingBottom= "50px"
 
+
+
 const navBar = document.querySelector("#top-bar");
+// console.log(navBar)
 
-//set the height to 100%
 
-navBar.style.height = "100%";
+navBar.style.height = "50px"
+navBar.style.width ="100%"
+navBar.style.background = "black"
+navBar.classList.add ("flex-around")
+// navBar.style.position ="absolute"
+console.log(navBar)
 
-navBar.style.background = "white";
+let navLinks =[
+    {text:'about', href:'/about'},
+    {text:'shop', href:'/shop'},
+    {text:'cart', href:'/cart'},
+    {text:'account', href:'account'},
+];
+navLinks.forEach((link) => {
+    //creating an anchor element
+    const aElement = document.createElement("a");
+    //add href to a elements
+    aElement.href = link.href;
+    //add text content
+    aElement.textContent = link.text;
+    //append new element to the navbar element
+    navBar.appendChild(aElement);
+    aElement.style.color = "white"
+});
+navBar.style.margin = "3px";
 
-navBar.classList.add("flex-around");
+const topNav = document.querySelector("a");
+// console.log(topNav);
+navBar.addEventListener("click", (event) => {
+    event.preventDefault();
+    // console.log(event.target.tagName);
+    if(event.target.tagName !== "A") return;
+});
 
-navBar.appendChild(vid);
-// let vidCtn = document.createElement("div");
-// console.log(vidCtn);
-// let vid = document.createElement("video");
-// vidCtn.appendChild(vid);
-// console.log(vid);
 let imgArr = [
     {name:"MJ", URL:"https://images.squarespace-cdn.com/content/v1/5b0487ff620b85272892562c/1584546580179-8WFX8KO96PQV5PLL4RES/712aTlKjhqL._SL1500_.jpg?format=750w"},
     {name:"Prince", URL:"https://images.squarespace-cdn.com/content/v1/5b0487ff620b85272892562c/1584637138583-MAJSHNGWW4J11O4AMA4P/image-asset.jpeg?format=750w"},
@@ -33,13 +61,11 @@ let imgArr = [
 ]
 imgArr.forEach(element => {
    const pics = document.createElement("img"); //creating an img element
+   const btn = document.createElement("button");
    pics.src = element.URL // selecting photo, allowing the photo to show
    main.appendChild(pics) // attaching "pics" to the "main" element
+   pics.appendChild(btn)
     pics.style.height = "20vh"
-    pics.style.border = "outset, 10px, silver"
-    pics.style.margin = "20px"
-    pics.style.alignItems ="center"
-    // pics.style.boxShadow = " 20px"
-    // pics.style.borderSpacing =
-    // pics.style.
+    pics.style.border = "outset, 10px, darkgoldenrod "
+    pics.style.margin = "40px"
 });
