@@ -13,5 +13,9 @@ nav a {
 
 .gallery-name {
     text-overflow: clip;
+}
 
+.audio-player {
+    width: 300px;
+    margin: 20px;
 }

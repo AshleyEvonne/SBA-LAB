@@ -87,7 +87,7 @@ function validateForm() {
     let f = document.forms["lname"]["fname"]["email"].value;
     console.log(f)
     if (f == "") {
-    alert("Name must be filled out");
+    alert("Please fill out field");
     return false;
     }
     }
@@ -105,6 +105,17 @@ form.addEventListener("submit",( e) =>{
 
 });
 document.querySelector("#title").innerHTML = "<h1>Subcribe To News Letter</h1>"
-// let formTitle = document.createElement("h1");
-// formTitle.innerText="Subscribe To News Letter"
-// formTitle.appendChild(form);
+
+const audio = document.querySelector("audio");
+
+// Example: Add custom play/pause buttons
+const playButton = document.getElementById("play-button");
+const pauseButton = document.getElementById("pause-button");
+
+playButton.addEventListener("click", () => {
+    audio.play();
+});
+
+pauseButton.addEventListener("click", () => {
+    audio.pause();
+});
