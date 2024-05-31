@@ -7,5 +7,11 @@ nav a {
   }
   
   #top-bar a:hover {
-    background-color: gray;
+    background-color: white;
   }
+
+
+.gallery-name {
+    text-overflow: clip;
+
+}

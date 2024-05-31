@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ALAB DOM Manipulation</title>
+    <title>SBA-LAB</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css">
   </head>
@@ -9,13 +9,30 @@
   <body>
     <header>
       <nav id="top-bar"></nav>
+      <!-- <p></p> -->
       <div>
         <video autoplay muted loop id="myVideo">
             <source src="https://videos.pexels.com/video-files/7135105/7135105-sd_640_360_30fps.mp4" type="video/mp4">
+            <h1>Hi</h1>
           </video>
       </div>
     </header>
     <main></main>
+
+    <div class="form">
+        <div id="title"></div>
+        <!-- <h1 id="subscribe"></h1>     -->
+        <form id="form">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <button id="submitBtn" type="submit">Submit</button>
+            
+          </form>
+    </div>
 
     <script src="index.js"></script>
   </body>
